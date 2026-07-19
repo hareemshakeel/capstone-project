@@ -18,14 +18,45 @@ A capstone project for the AI-assisted development track. This repository tracks
 
 ### Setup
 
-Application code is not scaffolded yet. Once it is, setup will look like this:
-
 ```bash
 git clone https://github.com/hareemshakeel/capstone-project.git
 cd capstone-project
-cp .env.example .env   # fill in values before running
-npm install            # exact commands TBD once project structure is added
+cp .env.example .env
 ```
+
+Fill in `.env` values (especially `MONGODB_URI` and `JWT_SECRET`), then install and run both apps:
+
+```bash
+# Backend
+cd server
+npm install
+npm run dev
+
+# Frontend (new terminal)
+cd client
+npm install
+npm run dev
+```
+
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:5000/api
+
+### Profile Settings
+
+1. Sign up or log in at `/register` or `/login`.
+2. Open **Profile Settings** at `/settings`.
+3. Edit email, phone number, date of birth, and address, then save.
+4. Change your password in the separate password section.
+
+## API Endpoints
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| POST | `/api/auth/register` | Create account |
+| POST | `/api/auth/login` | Log in |
+| GET | `/api/auth/me` | Get current user |
+| PUT | `/api/users/profile` | Update profile fields |
+| PUT | `/api/users/password` | Change password |
 
 ## Contributing
 

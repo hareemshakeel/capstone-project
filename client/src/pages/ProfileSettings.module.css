@@ -1,0 +1,261 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageHeader h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #0f172a;
+  letter-spacing: -0.03em;
+}
+
+.pageHeader p {
+  margin: 0;
+  color: #64748b;
+  max-width: 60ch;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kicker {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.formColumn,
+.summaryColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.card h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.sectionHeader {
+  margin-bottom: 1.25rem;
+}
+
+.sectionHeader h2,
+.summaryCard h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.sectionHeader p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fieldGroup label,
+.addressFieldset legend {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.helperText {
+  margin: -0.25rem 0 0;
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.fieldGroup input {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.625rem;
+  padding: 0.75rem 0.875rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fieldGroup input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.addressFieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gridTwo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.actionsRow {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.summaryCard,
+.tipsCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #dbe7f5;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.summaryCard {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.summaryList {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 0;
+}
+
+.summaryList div {
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.summaryList dt {
+  margin-bottom: 0.35rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #64748b;
+}
+
+.summaryList dd {
+  margin: 0;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.tipsCard h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.tipsCard p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  align-self: flex-start;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.primaryBtn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.secondaryBtn {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.secondaryBtn:hover:not(:disabled) {
+  background: #1e293b;
+}
+
+.primaryBtn:disabled,
+.secondaryBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.success,
+.error {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+}
+
+.success {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+@media (max-width: 640px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .gridTwo {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryCard {
+    position: static;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}
