@@ -14,3 +14,8 @@
 ## Notes for AI assistant
 - Prefer explicit error handling over silent failures
 - Keep components small and colocate styles
+
+## Rules learned from FL profile settings drill
+- Forms use react-hook-form + zod for validation — never hand-rolled validation logic or manual date parsing.
+- Every form input must have a real <label htmlFor>, not just a placeholder — applies to every field consistently, no exceptions.
+- New form components require tests covering the invalid-input and edge-case paths (empty fields, malformed input, boundary values) before being considered complete.
